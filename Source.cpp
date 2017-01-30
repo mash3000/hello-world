@@ -25,7 +25,7 @@ cout << "Enter the ingredient and type information for the four cakes \n" << end
 for (int o =0; o<4;o++){
 cout << "\nEnter each ingredient for the cake (Max 10 ingredients). A '-' (dash) indicates no more ingredients\n" << endl;
 
-for (int x =1;x<11;.x++){
+for (int x =1;x<11;x++){
 cout << "Ingredient " <<x<<":";
 cin >> ingredient;
 

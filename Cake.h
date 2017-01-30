@@ -25,7 +25,7 @@ void setCakeFlavour(string flavour){
 cakeFlavour = flavour;
 }
 void getCakeFlavour(){
-cout << "The cake's flavour is " << cakeFalvour << endl;
+cout << "The cake's flavour is " << cakeFlavour << endl;
 }
 private:
 string ingredients[10];
