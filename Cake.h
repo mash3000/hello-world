@@ -5,7 +5,7 @@ using namespace std;
 class Cake{
 public:
   Cake(){
-for auto i : ingredients){
+for (auto i : ingredients){
 i="";
 }
 cakeFlavour = "Vanilla";
