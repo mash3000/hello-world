@@ -3,7 +3,7 @@
 #include <vector>
 #include "Cake.h"
 using namespace std;
-
+int linearSearch(auto data, auto key);//prototype
 int main() {
 
 vector <Cake> Cakes;
@@ -11,6 +11,7 @@ Cake cakeObj;
 string ingredient;
 string ingredients[10];
 string flav;
+string search_key= "cakeFlavour";
 
 for(int i = 0; i<4;i++) {
 Cakes.push_back(cakeObj);
@@ -43,14 +44,33 @@ cout << "Please enter the type of cake you are making" << endl;
 getline(cin,flav);
 Cakes[o].setCakeFlavour(flav);
 }
-cout << "The details for the four cakes are as follows:\n" << endl;
-int y=1;
+ 
+    while(search_key != "#")//perform searches until sentinel entered
+    {
+        result = linearSearch(inputs,search_key);
 
-for (int r=0;r<4;r++){
-cout << "\nCake "<<y<<"\nIngredients:" << endl;
-Cakes[r].displayIngredients();
-Cakes[r].getCakeFlavour();
-y++;
+        cout<<"  '"<<search_key<<"' was ";
+
+        if (result == -1)
+          cout<<"not found";
+        else
+          cout<<"found at index "<<result;
+
+
+        cout<<endl<<endl<<"Enter a value to search for: ";
+        cin>>search_key; 
+    }
+
+   cout<<endl<<"Program \"search it\" is now finished."<<endl<<endl;
+
+    return 0;
 }
-system("pause");
+
+int linearSearch(auto data,auto key){
+for(int i=0;i<data.size();i++){
+if(data[i] == key) {
+return i;
+}//endif
+}//endfor 
+return -1; //not found
 }
