@@ -11,7 +11,8 @@ Cake cakeObj;
 string ingredient;
 string ingredients[10];
 string flav;
-string search_key= "cakeFlavour";
+string search_key = "Vanilla";
+int result;
 
 for(int i = 0; i<4;i++) {
 Cakes.push_back(cakeObj);
@@ -47,7 +48,8 @@ Cakes[o].setCakeFlavour(flav);
  
     while(search_key != "#")//perform searches until sentinel entered
     {
-        result = linearSearch(inputs,search_key);
+       
+        result = linearSearch(Cakes,search_key);
 
         cout<<"  '"<<search_key<<"' was ";
 
@@ -68,7 +70,7 @@ Cakes[o].setCakeFlavour(flav);
 
 int linearSearch(auto data,auto key){
 for(int i=0;i<data.size();i++){
-if(data[i] == key) {
+if(data[i].getCakeFlavour() == key) {
 return i;
 }//endif
 }//endfor 

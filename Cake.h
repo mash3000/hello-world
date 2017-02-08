@@ -24,8 +24,9 @@ cout << i << endl;
 void setCakeFlavour(string flavour){
 cakeFlavour = flavour;
 }
-void getCakeFlavour(){
-cout << "The cake's flavour is " << cakeFlavour << endl;
+
+string getCakeFlavour(){
+ return cakeFlavour;
 }
 private:
 string ingredients[10];
